@@ -14,6 +14,11 @@ body {
   background-color: aliceblue;
 }
 
+div > span {
+  margin: 10px 20px;
+  font-size: 40px;
+}
+
 .screen {
   height: 200px;
   border: 2px black solid;
@@ -22,6 +27,9 @@ body {
   background-color: black;
   color: white;
   font-family:'Courier New', Courier, monospace;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .clear-buttons {
