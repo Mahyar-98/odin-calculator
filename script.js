@@ -36,7 +36,11 @@ let operation = "";
 let isNewNumber = true;
 let display = null;
 btns.forEach(btn => {
-  btn.addEventListener("click", output)
+  btn.addEventListener("click", output);
+  btn.addEventListener("mouseover", e => e.target.classList.toggle("btn-active"));
+  btn.addEventListener("mouseout", e => e.target.classList.toggle("btn-active"));
+  btn.addEventListener("mousedown", e => e.target.classList.toggle("clicked"));
+  btn.addEventListener("mouseup", e => e.target.classList.toggle("clicked"));
 });
 
 
@@ -80,7 +84,6 @@ function output(event) {
   if ("÷×-+=".includes(event.target.textContent)) {
     isNewNumber = true;
     if (firstNum === null) {
-      console.log("hi")
       firstNum = +screen.textContent;
       operation = event.target.textContent;
     } else {
